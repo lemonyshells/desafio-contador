@@ -37,47 +37,51 @@ Esse desafio foi passado no Basecamp Javascript da [DIO.me](https://web.dio.me/h
 
   `const displayObj = document.getElementById("currentNumber");`
 
-  `var currentNumber = 0;`
+  ```
+  var currentNumber = 0;
+  
+  function increment() {
+  
+   currentNumber = currentNumber + 1;
+  
+   if (currentNumber < 0) {
+  
+    displayObj.style.color = "red";
+  
+   } else {
+  
+    displayObj.style.color = "black";
+  
+   }
+  
+   displayObj.innerHTML = currentNumber;
+  
+  }
+  
+  function decrement() {
+  
+   currentNumber = currentNumber - 1;
+  
+   if (currentNumber < 0) {
+  
+    displayObj.style.color = "red";
+  
+   } else {
+  
+    displayObj.style.color = "black";
+  
+   }
+  
+   displayObj.innerHTML = currentNumber;
+  
+  }
+  
+  subtrair.addEventListener("click", decrement);
+  
+  adicionar.addEventListener("click", increment);
+  ```
 
-  `function increment() {`
-
-   `currentNumber = currentNumber + 1;`
-
-   `if (currentNumber < 0) {`
-
-    `displayObj.style.color = "red";`
-
-   `} else {`
-
-    `displayObj.style.color = "black";`
-
-   `}`
-
-   `displayObj.innerHTML = currentNumber;`
-
-  `}`
-
-  `function decrement() {`
-
-   `currentNumber = currentNumber - 1;`
-
-   `if (currentNumber < 0) {`
-
-    `displayObj.style.color = "red";`
-
-   `} else {`
-
-    `displayObj.style.color = "black";`
-
-   `}`
-
-   `displayObj.innerHTML = currentNumber;`
-
-  `}`
-
-  `subtrair.addEventListener("click", decrement);`
-
-  `adicionar.addEventListener("click", increment);`
+  
 
   ### Referências
 
